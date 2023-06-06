@@ -671,7 +671,7 @@ class UnivDataController {
             reg = stateParamsNew.reg; // region ///
             this.udtService.year = yr;
             
-            url = '/final/getunivdata_gmap23.php?year='+this.udtService.year/*yr*/+'&subj='+subj+'&cntr='+cntr+'&reg='+reg;
+            url = 'http://anyphp.by/final/getunivdata_gmap23.php?year='+this.udtService.year/*yr*/+'&subj='+subj+'&cntr='+cntr+'&reg='+reg;
         }
         
         if (forceFull && !!forceFrom && !!forceTo) {
@@ -715,7 +715,7 @@ class UnivDataController {
         
         code = this.code;
         console.log('code0: ', this.code);
-        if (this.udtService.getStateURL() == this.udtService.setStateURL('/final/getunivdata_gmap23.php?year='+this.udtService.year/*yr*/+'&subj='+subj+'&cntr='+cntr+'&reg='+reg, this.udtService.forceFull) && 0 !== this.code) {
+        if (this.udtService.getStateURL() == this.udtService.setStateURL('http://anyphp.by/final/getunivdata_gmap23.php?year='+this.udtService.year/*yr*/+'&subj='+subj+'&cntr='+cntr+'&reg='+reg, this.udtService.forceFull) && 0 !== this.code) {
             this.code = 0;
             //return;
             code = this.code;
@@ -1049,8 +1049,8 @@ class UnivDataController {
 					else{cntr=0;}
 					//alert(subj+'\n'+yr+'\n'+reg+'\n'+cntr);
 					this.dtcntr=[];  this.dtcntr.length=0;
-					//var urlc='final/getunivdata_ymap.php?year='+yr+'&subj='+subj+'&reg='+reg+'&cntr='+cntr;
-					var urlc='./final/getcntrdata_gmap23.php?year='+yr+'&subj='+subj+'&reg='+reg;
+					//var urlc='http://anyphp.by/final/getunivdata_ymap.php?year='+yr+'&subj='+subj+'&reg='+reg+'&cntr='+cntr;
+					var urlc='http://anyphp.by/final/getcntrdata_gmap23.php?year='+yr+'&subj='+subj+'&reg='+reg;
 					//alert(urlc);
                     if (this.oldUrlc === urlc && !!this.dtcntr && this.dtcntr.length > 0) {
                         return this.dtcntr; ///
